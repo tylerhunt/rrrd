@@ -21,7 +21,7 @@ spec = Gem::Specification.new do |spec|
   spec.extensions = FileList["ext/**/extconf.rb"].to_a
   spec.test_files = FileList['spec/**/*spec.rb'].to_a
   spec.has_rdoc = true
-  spec.extra_rdoc_files = ['README.rdoc', 'LICENSE']
+  spec.extra_rdoc_files = ['README.markdown', 'LICENSE']
 end
 
 Rake::GemPackageTask.new(spec) do |package|
@@ -30,7 +30,7 @@ end
 
 Rake::RDocTask.new do |rdoc|
   rdoc.title    = 'RRRD Documentation'
-  rdoc.main     = 'README.rdoc'
+  rdoc.main     = 'README.markdown'
   rdoc.rdoc_dir = 'rdoc'
   rdoc.rdoc_files.include('README', 'LICENSE', 'lib/**/*.rb')
   rdoc.options << '--inline-source'
